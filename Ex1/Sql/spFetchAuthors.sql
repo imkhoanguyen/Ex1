@@ -1,6 +1,6 @@
-CREATE PROCEDURE sp_GetAuthorById
-    @id INT
+CREATE PROCEDURE sp_GetAllAuthors
 AS
 BEGIN
-    SELECT * FROM Authors WHERE AuthorId = @id
+    SELECT * FROM Authors
 END
+
