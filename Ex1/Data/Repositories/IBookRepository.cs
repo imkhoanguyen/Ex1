@@ -3,10 +3,10 @@ using Ex1.Entities;
 
 namespace Ex1.Data.Repositories
 {
-    public interface IBookRepository : IRepository<Books>
+    public interface IBookRepository : IRepository<Book>
     {
-        Task<IEnumerable<Books>> GetAllBooksAsync();
-        Task<Books?> GetBookByIdAsync(int id);
-        Task<IEnumerable<Books>> GetBooksWithFilterAsync(BookFilterRequest request);
+        Task<IEnumerable<Book>> GetAllBooksAsync();
+        Task<Book?> GetBookByIdAsync(int id);
+        Task<IEnumerable<Book>> GetBooksWithFilterAsync(BookFilterRequest request);
     }
 }

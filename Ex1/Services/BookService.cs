@@ -33,7 +33,7 @@ namespace Ex1.Services
 
         public async Task<BookResponse?> CreateAsync(BookCreateRequest request)
         {
-            var book = new Books
+            var book = new Book
             {
                 Title = request.Title,
                 PublishedDate = request.PublishedDate,

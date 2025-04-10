@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Ex1.Data.Repositories
 {
-    public class BookRepository : Repository<Books>, IBookRepository
+    public class BookRepository : Repository<Book>, IBookRepository
     {
         private readonly ApplicationDbContext _context;
         public BookRepository(ApplicationDbContext context) : base(context)
@@ -14,20 +14,20 @@ namespace Ex1.Data.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Books>> GetAllBooksAsync()
+        public async Task<IEnumerable<Book>> GetAllBooksAsync()
         {
             return await _context.Books.FromSqlRaw("EXEC sp_GetAllBooks").ToListAsync();
 
         }
 
-        public async Task<Books?> GetBookByIdAsync(int id)
+        public async Task<Book?> GetBookByIdAsync(int id)
         {
             var result = await _context.Books.FromSqlRaw($"EXEC sp_GetBookById {id}").ToListAsync();
 
             return result.FirstOrDefault();
         }
 
-        public async Task<IEnumerable<Books>> GetBooksWithFilterAsync(BookFilterRequest request)
+        public async Task<IEnumerable<Book>> GetBooksWithFilterAsync(BookFilterRequest request)
         {
             var parameters = new[]
             {

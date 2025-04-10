@@ -5,7 +5,7 @@ namespace Ex1.Mapper
 {
     public class BookMapper
     {
-        public static BookResponse EntityToResponse(Books entity)
+        public static BookResponse EntityToResponse(Book entity)
         {
             return new BookResponse
             {

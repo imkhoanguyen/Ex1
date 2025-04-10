@@ -2,9 +2,9 @@
 
 namespace Ex1.Data.Repositories
 {
-    public interface IAuthorRepository : IRepository<Authors>
+    public interface IAuthorRepository : IRepository<Author>
     {
-        Task<IEnumerable<Authors>> GetAllAuthorAsync();
-        Task<Authors?> GetAuthorByIdAsync(int id);
+        Task<IEnumerable<Author>> GetAllAuthorAsync();
+        Task<Author?> GetAuthorByIdAsync(int id);
     }
 }

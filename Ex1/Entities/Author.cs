@@ -2,7 +2,7 @@
 
 namespace Ex1.Entities
 {
-    public class Authors
+    public class Author
     {
         [Key]
         public int AuthorId { get; set; }
@@ -12,6 +12,6 @@ namespace Ex1.Entities
         [Required]
         [MaxLength(500)]
         public required string Bio { get; set; }
-        public ICollection<Books> Books { get; set; } = [];
+        public ICollection<Book> Books { get; set; } = [];
     }
 }

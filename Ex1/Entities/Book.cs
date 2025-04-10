@@ -2,7 +2,7 @@
 
 namespace Ex1.Entities
 {
-    public class Books
+    public class Book
     {
         [Key]
         public int BookId { get; set; }
@@ -12,6 +12,6 @@ namespace Ex1.Entities
         public decimal Price { get; set; }
         public DateTime? PublishedDate { get; set; }
         public int AuthorId { get; set; }
-        public Authors? Author { get; set; }
+        public Author? Author { get; set; }
     }
 }

@@ -5,7 +5,7 @@ namespace Ex1.Mapper
 {
     public class AuthorMapper
     {
-        public static AuthorResponse EntityToResponse(Authors entity)
+        public static AuthorResponse EntityToResponse(Author entity)
         {
             return new AuthorResponse
             {

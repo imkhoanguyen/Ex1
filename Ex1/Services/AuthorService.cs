@@ -31,7 +31,7 @@ namespace Ex1.Services
 
         public async Task<AuthorResponse?> CreateAsync(AuthorCreateRequest request)
         {
-            var author = new Authors
+            var author = new Author
             {
                 Name = request.Name,
                 Bio = request.Bio,

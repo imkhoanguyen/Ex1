@@ -9,8 +9,8 @@ namespace Ex1.Data
         {
         }
 
-        public DbSet<Authors> Authors { get; set; }
-        public DbSet<Books> Books { get; set; }
+        public DbSet<Author> Authors { get; set; }
+        public DbSet<Book> Books { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
