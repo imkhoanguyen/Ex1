@@ -50,6 +50,11 @@ namespace Ex1.Controllers
         [HttpPut("update")]
         public async Task<IActionResult> Update([FromBody] BookUpdateRequest request)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
             var response = await _bookService.UpdateAsync(request);
             if (response == null) return BadRequest();
             return Ok(response);
